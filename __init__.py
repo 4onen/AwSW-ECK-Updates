@@ -8,7 +8,7 @@ class AWSWMod(Mod):
     name = "Savior"
     version = "v1.2.5"
     author = "EvilChaosKnight"
-    dependencies = ["Chaos_Knight core mod."]
+    dependencies = ["MagmaLink", "Chaos_Knight core mod."]
 
     @staticmethod
     def mod_load():
