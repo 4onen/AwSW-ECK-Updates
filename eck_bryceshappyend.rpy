@@ -89,12 +89,12 @@ label eck_bryce_maverickmap:
                 show maverick normal with dissolve
                 stop music fadeout 2.0
                 $ renpy.pause(1.0)
-                return
+                jump eck_common_brycemv_return
                 
             "Say nothing.":
-                return
+                jump eck_common_brycemv_return
     else:
-        return
+        jump eck_common_brycemv_return
 
 #   Also includes Sebastian fix. Yay. I'll copy-paste that later.
 #   It is done. In a separate file just in case.

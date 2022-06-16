@@ -4,9 +4,9 @@ label eck_common_brycemv:
         if persistent.havemap == True:
             jump eck_bryce_maverickmap
         else:
-            return
+            jump eck_common_brycemv_return
     else:
-        return
+        jump eck_common_brycemv_return
     
 label eck_common_bryce:
     
@@ -45,7 +45,7 @@ label eck_common_bryce:
     if brycegoodending == True:
         pass
     else:
-        jump eck_bryce_stockbadending
+        jump eck_common_bryce_return
     
     if persistent.brycegoodending == True:
         if persistent.adinegoodending == True:
@@ -53,13 +53,13 @@ label eck_common_bryce:
                 if sebastiansaved == True or sebastianunplayed == False:
                     jump eck_bryce_rezaencounter
                 else:
-                    jump eck_bryce_stockgoodending
+                    jump eck_common_bryce_return
             else:
-                jump eck_bryce_stockgoodending
+                jump eck_common_bryce_return
         else:
-            jump eck_bryce_stockgoodending
+            jump eck_common_bryce_return
     else:
-        jump eck_bryce_stockgoodending
+        jump eck_common_bryce_return
         
 label eck_bryce_goodendcredits:
     
