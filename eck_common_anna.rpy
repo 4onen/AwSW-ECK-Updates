@@ -118,7 +118,7 @@ label eck_anna_customcredits:
 
     $ renpy.pause (8.0)
 
-    return
+    jump eck_anna_stockcredits3
 
 label eck_anna_customcredits2:
     $ persistent.eckannacured = True
@@ -152,8 +152,8 @@ label eck_anna_customcredits2:
 
     $ renpy.pause (8.0)
 
-    return
-    
+    jump eck_anna_stockcredits3
+
 
 label eck_anna_stockdeathoutcome:
     
@@ -178,7 +178,7 @@ label eck_anna_stockdeathoutcome:
     elif eckannacurrentending == "F":
         jump eck_anna_midendingf
     else:
-        return
+        $ renpy.error("Invalid ending.")
     
 label eck_anna_stockcredits:
     scene black with dissolveslow
@@ -190,24 +190,5 @@ label eck_anna_stockcredits:
         s "Looks like you've got a default (\"bad\") good ending."
         s "Kinda defeats the whole purpose of this mod, doesn't it? Don't be shy to load a save and try again, if you wish. I won't tell anyone, promise."
         s "The requirements are pretty elaborate, though (see ReadMe for details), so you might have to start over from the beginning if you want to meet them. Either way, good luck, [player_name]!"
-    
-label eck_anna_stockcredits2:
-    $ renpy.pause (3.0)
-    $ _game_menu_screen = None
-    stop sound fadeout 2.0
 
-    #Stock credits
-    play sound "mx/fragilemind.ogg" fadein 0.5
-
-    show rezathroatslit at Pan ((500, 326), (1280,0), 20.0)
-    show credits1 at left
-    with dissolvemed
-
-    $ renpy.pause (8.0)
-
-    show black2 at left with dissolvemed
-    show credits2 at left with dissolvemed
-
-    $ renpy.pause (8.0)
-
-    return
+    jump eck_anna_stockcredits2
